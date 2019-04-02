@@ -2,5 +2,5 @@
 
 > WIP
 
-sudo yarn install
-yarn dev
+### sudo yarn install
+### yarn dev
