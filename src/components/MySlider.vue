@@ -1,5 +1,6 @@
 <template>
   <div class="slide-con" :class="{mobile:$q.platform.is.mobile}">
+    <!-- https://github.com/shhdgit/vue-easy-slider -->
     <slider animation="fade" :controlBtn="false" height="100%" :autoplay="true" :interval="4000">
       <slider-item>
         <div class="img-bg img-bg1 column justify-center items-center">

@@ -1,7 +1,7 @@
 <template>
-  <div class="footer-con q-pa-md">
-    <div class="row q-col-gutter-x-md wrap">
-      <div class="col-sm-6 col-md-3">
+  <div class="q-pa-md footer-con">
+    <div class="row q-col-gutter-lg">
+      <div class="col-xs-6 col-sm-6 col-md-3">
         <p class="footer-title">站点导航</p>
         <ul>
           <li>首页</li>
@@ -11,7 +11,7 @@
           <li>关于</li>
         </ul>
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-xs-6 col-sm-6 col-md-3">
         <p class="footer-title">联系我们</p>
         <ul>
           <li>张经理 187-0987-4765</li>
@@ -21,14 +21,14 @@
           <li>杭州市余杭区西溪八方城9楼403室</li>
         </ul>
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-xs-6 col-sm-6 col-md-3">
         <p class="footer-title">工作时间</p>
         <ul>
           <li>周一至周五</li>
           <li>09:00 - 18:00 （GMT+8）</li>
         </ul>
       </div>
-      <div class="col-sm-6 col-md-3">
+      <div class="col-xs-6 col-sm-6 col-md-3">
         <p class="footer-title">官方微信</p>
         <ul>
           <li>
@@ -54,11 +54,13 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .footer-con
     background #2e2e2e
     color #999
     padding 1.875rem 28%
+    @media screen and (max-width 700px)
+      padding 1.25rem
     .footer-title
       font-size 1.125rem
       color #ccc

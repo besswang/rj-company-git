@@ -1,13 +1,13 @@
 <template>
   <q-page class="flex flex-center">
     <my-slider />
-    <div class="q-pa-md row q-col-gutter-x-md wrap">
-      <div class="col-sm-6 col-md-3" v-for="(list, index) in carditem" :key="index">
+    <div class="q-pa-md row q-col-gutter-xl text-center card-row">
+      <div class="col-xs-6 col-sm-6 col-md-3 card-col" v-for="(list, index) in cardList" :key="index">
         <q-card
         class="my-card text-white"
         :class="`cbg${index}`"
         >
-          <h5 v-text="list.title"></h5>
+          <h6 v-text="list.title"></h6>
           <p v-text="list.info"></p>
         </q-card>
       </div>
@@ -16,6 +16,7 @@
 </template>
 <script>
 import MySlider from '../components/MySlider.vue'
+import { CARD_LIST } from '../meta/meta.js'
 export default {
   name: 'Home',
   components: {
@@ -23,41 +24,36 @@ export default {
   },
   data () {
     return {
-      carditem: [
-        {
-          title: '手机APP',
-          info: '移动WEB、APP H5动画、小程序'
-        }, {
-          title: '手机APP',
-          info: '移动WEB、APP H5动画、小程序'
-        }, {
-          title: '手机APP',
-          info: '移动WEB、APP H5动画、小程序'
-        }, {
-          title: '手机APP',
-          info: '移动WEB、APP H5动画、小程序'
-        }
-
-      ],
-      lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      cardList: CARD_LIST
     }
-  },
-  method: {
-
   }
 }
 </script>
 <style lang="stylus" scoped>
-  .cbg0
-    background url('~assets/images/cbg0.jpg')
-  .cbg1
-    background url('~assets/images/cbg1.jpg')
-  .cbg2
-    background url('~assets/images/cbg2.jpg')
-  .cbg3
-    background url('~assets/images/cbg3.jpg')
-  .my-card
-    background-position center center
-    background-size cover
-    background-repeat no-repeat
+.card-row
+  width 68.75rem
+  .card-col
+    padding .3125rem
+    .cbg0
+      background url('~assets/images/cbg0.jpg')
+    .cbg1
+      background url('~assets/images/cbg1.jpg')
+    .cbg2
+      background url('~assets/images/cbg2.jpg')
+    .cbg3
+      background url('~assets/images/cbg3.jpg')
+    .my-card
+      background-position center center
+      background-size cover
+      background-repeat no-repeat
+      padding 2.5rem
+      height 25rem
+      @media screen and (max-width 700px)
+        height 12.5rem
+      h6
+        padding-bottom 1.875rem
+      p
+        font-size .875rem
+        max-width 6.875rem
+        margin 0 auto
 </style>
